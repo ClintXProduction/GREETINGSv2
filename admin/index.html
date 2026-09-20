@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CLTX4 Admin</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+/* Fallback admin styling: keeps this page usable even if GitHub briefly fails to load the shared stylesheet. */
+body{background:#07080d;color:#f7f7fb;font-family:Arial,sans-serif} .admin{max-width:1000px;margin:auto;padding:50px 24px}
+.panel,.stats div{background:#11131c;border:1px solid #2a2d3d;border-radius:18px;padding:24px}.hidden{display:none!important}
+.btn{background:linear-gradient(135deg,#a27cff,#6951ff);color:#fff;border:0;border-radius:12px;padding:13px 18px;font-weight:700;cursor:pointer}.wide{width:100%;margin-top:18px}
+input{width:100%;padding:13px;border-radius:10px;border:1px solid #333746;background:#0c0d14;color:#fff;box-sizing:border-box;font-size:16px}.muted,small{color:#9094a5}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}.stats b,.stats small{display:block}.stats b{font-size:36px}.stats small{margin-top:5px}
+@media(max-width:750px){.stats{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><a class="logo" href="../">CLTX4 <span>ADMIN</span></a></header>
+<main class="admin">
+<section id="login" class="panel">
+<h2>🔐 Admin Login</h2>
+<p class="muted">CLTX4 GREET local/demo dashboard.</p>
+<input id="pass" type="password" placeholder="Admin password" autocomplete="current-password">
+<button class="btn wide" id="loginBtn" type="button">Login →</button>
+<p id="err"></p>
+</section>
+<section id="dash" class="hidden">
+<h1>⚡ CLTX4 Dashboard</h1>
+<div class="stats">
+<div><b id="greetings">0</b><small>Greetings created</small></div>
+<div><b id="opens">0</b><small>Consented opens</small></div>
+<div><b id="visitors">0</b><small>Anonymous visitor IDs</small></div>
+</div>
+<div class="panel"><h2>📊 Local activity</h2><div id="events">No data yet.</div><br><button class="btn" id="clear" type="button">Clear local data</button></div>
+</section>
+</main>
+<script src="../js/admin.js" defer></script>
+</body>
+</html>
